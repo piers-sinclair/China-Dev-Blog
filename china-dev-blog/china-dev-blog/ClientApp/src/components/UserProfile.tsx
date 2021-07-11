@@ -27,7 +27,7 @@ class UserProfile extends React.PureComponent<UserProfileProps> {
         return (
             <React.Fragment>
                 <Card
-                    cover={<img alt="example" src={require('../images/piers-cover.jpg')} className="cover-photo" />}>
+                    cover={<img alt="profile-cover-photo" src={require('../images/piers-cover.jpg')} className="cover-photo" />}>
                     <Meta
                         avatar={<Avatar src={require('../images/piers-avatar.jpg')} />}
                         title={this.props.userProfile.FirstName + " " + this.props.userProfile.Surname}

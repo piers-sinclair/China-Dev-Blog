@@ -5,6 +5,7 @@ import { ApplicationState } from '../store';
 import * as UserProfileStore from '../store/UserProfile';
 import { Card, Avatar } from "antd";
 import 'antd/dist/antd.css';
+import { EditOutlined, SettingOutlined } from '@ant-design/icons';
 
 type UserProfileProps =
     UserProfileStore.UserProfileState
@@ -27,7 +28,11 @@ class UserProfile extends React.PureComponent<UserProfileProps> {
         return (
             <React.Fragment>
                 <Card
-                    cover={<img alt="profile-cover-photo" src={require('../images/piers-cover.jpg')} className="cover-photo" />}>
+                    cover={<img alt="profile-cover-photo" src={require('../images/piers-cover.jpg')} className="cover-photo" />}
+                    actions={[
+                        <SettingOutlined key="setting" />,
+                        <EditOutlined key="edit" />
+                    ]}>
                     <Meta
                         avatar={<Avatar src={require('../images/piers-avatar.jpg')} />}
                         title={this.props.userProfile.FirstName + " " + this.props.userProfile.Surname}
@@ -35,6 +40,7 @@ class UserProfile extends React.PureComponent<UserProfileProps> {
                     </Meta>
                     <br/>
                     {this.props.userProfile.Description}
+
                 </Card>
             </React.Fragment>
         );

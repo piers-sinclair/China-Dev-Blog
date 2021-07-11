@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const Home = () => (
   <div>
-    <h1>Welcome to my blog about China integration!</h1>
+    <h1>Welcome to my blog website about China integration!</h1>
   </div>
 );
 

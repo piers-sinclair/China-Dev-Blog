@@ -28,40 +28,29 @@ export const actionCreators = {
     requestUserProfile: (): AppThunkAction<KnownAction> => (dispatch, getState) => {
         const appState = getState();
         if (appState && appState.userProfile) {
-            // fetch(`userprofile`)
-            //     .then(response => response.json() as Promise<UserProfile>)
-            //     .then(data => {
-            //         dispatch({ type: 'RECEIVE_USER_PROFILE', userProfile: data });
-            //     });
-
             dispatch({ type: 'REQUEST_USER_PROFILE' });
 
             let url = 'UserProfile/GetUserProfile';
 
             fetch(url)
                 .then(response => {
-                    if (response.ok) {
-                        return response.json().then(data => {
-                            dispatch({ type: 'RECEIVE_USER_PROFILE', userProfile: data });
-                        });
-                    }
-                    else {
-                    }
-
-                })
+                    return response.json().then(data => {
+                        dispatch({ type: 'RECEIVE_USER_PROFILE', userProfile: data });
+                    });
+                });
         }
     }
 };
 
 
-const unloadedState: UserProfileState = { 
-    userProfile: { 
-        FirstName: "", 
-        Surname: "", 
-        JobTitle: "", 
-        Description: "" 
-    }, 
-    isLoading: false 
+const unloadedState: UserProfileState = {
+    userProfile: {
+        FirstName: "",
+        Surname: "",
+        JobTitle: "",
+        Description: ""
+    },
+    isLoading: false
 };
 
 export const reducer: Reducer<UserProfileState> = (state: UserProfileState | undefined, incomingAction: Action): UserProfileState => {

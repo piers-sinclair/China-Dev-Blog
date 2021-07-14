@@ -20,10 +20,6 @@ class UserProfile extends React.PureComponent<UserProfileProps> {
         this.ensureDataFetched();
     }
 
-    public componentDidUpdate() {
-        this.ensureDataFetched();
-    }
-
     public render() {
         return (
             <React.Fragment>

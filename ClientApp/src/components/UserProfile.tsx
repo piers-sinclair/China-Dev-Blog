@@ -19,15 +19,12 @@ class UserProfile extends React.PureComponent<UserProfileProps> {
 
     public componentDidMount() {
         this.ensureDataFetched();
-        this.props.i18n.changeLanguage('zh_cn');
     }
 
     public render() {
         
         return (
             <React.Fragment>
-                {this.props.t('General:home')}
-                {this.props.t('Home:body')}
                 <Card
                     cover={<img alt="profile-cover-photo"
                                 src={require('../images/piers-cover.jpg')}
@@ -55,9 +52,9 @@ class UserProfile extends React.PureComponent<UserProfileProps> {
     }
 }
 
-const comp = connect(
+const conn = connect(
     (state: ApplicationState) => state.userProfile,
     UserProfileStore.actionCreators
 )(UserProfile as any);
 
-export default withTranslation(['General'], ['Home'])(comp);
+export default withTranslation(['General'])(conn);

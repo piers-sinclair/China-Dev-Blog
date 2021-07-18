@@ -18,3 +18,5 @@ code {
     object-fit: cover;
     object-position: 0 0;
 }
+
+svg { vertical-align: baseline; }

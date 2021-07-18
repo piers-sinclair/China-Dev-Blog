@@ -3,10 +3,11 @@ import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLi
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
 import { WithTranslation, withTranslation } from 'react-i18next';
+import LanguageDropDown  from './LanguageDropDown';
 
-type NavMenuProps = 
+type NavMenuProps =
     { isOpen: boolean }
-    & WithTranslation;    
+    & WithTranslation;
 
 class NavMenu extends React.PureComponent<NavMenuProps> {
     public state = {
@@ -19,7 +20,7 @@ class NavMenu extends React.PureComponent<NavMenuProps> {
                 <Navbar className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" light>
                     <Container>
                         <NavbarBrand tag={Link} to="/">{this.props.t('General:websiteTitle')}</NavbarBrand>
-                        <NavbarToggler onClick={this.toggle} className="mr-2"/>
+                        <NavbarToggler onClick={this.toggle} className="mr-2" />
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={this.state.isOpen} navbar>
                             <ul className="navbar-nav flex-grow">
                                 <NavItem>
@@ -28,6 +29,7 @@ class NavMenu extends React.PureComponent<NavMenuProps> {
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/user-profile">{this.props.t('General:userProfile')}</NavLink>
                                 </NavItem>
+                                <LanguageDropDown />
                             </ul>
                         </Collapse>
                     </Container>

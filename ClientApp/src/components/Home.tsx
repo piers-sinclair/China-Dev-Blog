@@ -1,10 +1,23 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { WithTranslation, withTranslation } from 'react-i18next';
 
-const Home = () => (
-  <div>
-    <h1>Welcome to my blog website about China integration!</h1>
-  </div>
-);
 
-export default connect()(Home);
+type HomeProps =
+  WithTranslation;
+
+class Home extends React.PureComponent<HomeProps> {
+
+  public render() {
+    return (
+      <div>
+        <h1>{this.props.t('General:websiteTitle')}</h1>
+        <h2>{this.props.t('Home:body')}</h2>
+      </div>
+    );
+  }
+}
+
+const conn = connect()(Home);
+
+export default withTranslation(['General', 'Home'])(conn);

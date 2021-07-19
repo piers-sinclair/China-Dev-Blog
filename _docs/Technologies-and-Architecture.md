@@ -6,18 +6,18 @@ TBD
 ## Backend
 
 ### Main Language
-.NET 5
+[.NET 5](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ## Frontend
 
 ### Main Language
-React
+[React](https://reactjs.org/)
 
 ### State Management
-Redux
+[Redux](https://redux.js.org/introduction/getting-started)
 
 ### Styling
-Ant Design
+[Ant Design](https://ant.design/)
 
 ### Localisation
-React-i18next
+[React-i18next](https://react.i18next.com/)

@@ -4,16 +4,16 @@ The China Dev Blog documentation is organised as per [Awesome documentation](htt
 
 ## The important documents
 
-[Instructions for Compiling](_docs\Instructions-Compile.md)
+[Instructions for Compiling](_docs/Instructions-Compile.md)
 
-[Instructions for Deployment](_docs\Instructions-Deployment.md)
+[Instructions for Deployment](_docs/Instructions-Deployment.md)
 
-[Business Case](_docs\Business.md)
+[Business Case](_docs/Business.md)
 
-[Technologies and Architecture](_docs\Technologies-and-Architecture.md)
+[Technologies and Architecture](_docs/Technologies-and-Architecture.md)
 
-[Alternaive Solutions Considered](_docs\Alternative-Solutions-Considered.md)
+[Alternaive Solutions Considered](_docs/Alternative-Solutions-Considered.md)
 
-[Definition of Done](_docs\Definition-of-Done.md)
+[Definition of Done](_docs/Definition-of-Done.md)
 
-[Definition of Ready](_docs\Definition-of-Ready.md)
+[Definition of Ready](_docs/Definition-of-Ready.md)

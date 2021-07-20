@@ -28,7 +28,7 @@ class UserProfile extends React.PureComponent<UserProfileProps> {
                 JobTitle, 
                 Description 
             } 
-        } = this.props;        
+        } = this.props;
         
         return (
             <React.Fragment>

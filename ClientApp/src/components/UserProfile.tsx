@@ -4,7 +4,6 @@ import { RouteComponentProps } from 'react-router';
 import { ApplicationState } from '../store';
 import * as UserProfileStore from '../store/UserProfile';
 import { Card, Avatar } from "antd";
-import 'antd/dist/antd.css';
 import { EditOutlined, SettingOutlined } from '@ant-design/icons';
 import { WithTranslation, withTranslation } from 'react-i18next';
 
@@ -22,6 +21,14 @@ class UserProfile extends React.PureComponent<UserProfileProps> {
     }
 
     public render() {
+        const { 
+            userProfile: { 
+                FirstName, 
+                Surname, 
+                JobTitle, 
+                Description 
+            } 
+        } = this.props;        
         
         return (
             <React.Fragment>
@@ -35,11 +42,11 @@ class UserProfile extends React.PureComponent<UserProfileProps> {
                     ]}>
                     <Meta
                         avatar={<Avatar src={require('../images/piers-avatar.jpg')} />}
-                        title={this.props.userProfile.FirstName + " " + this.props.userProfile.Surname}
-                        description={this.props.userProfile.JobTitle}>
+                        title={FirstName + " " + Surname}
+                        description={JobTitle}>
                     </Meta>
                     <br/>
-                    {this.props.userProfile.Description}
+                    {Description}
 
                 </Card>
             </React.Fragment>

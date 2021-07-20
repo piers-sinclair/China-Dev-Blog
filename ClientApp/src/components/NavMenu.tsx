@@ -15,19 +15,21 @@ class NavMenu extends React.PureComponent<NavMenuProps> {
     };
 
     public render() {
+        const { t } = this.props;
+
         return (
             <header>
                 <Navbar className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" light>
                     <Container>
-                        <NavbarBrand tag={Link} to="/">{this.props.t('General:websiteTitle')}</NavbarBrand>
+                        <NavbarBrand tag={Link} to="/">{t('General:websiteTitle')}</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} className="mr-2" />
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={this.state.isOpen} navbar>
                             <ul className="navbar-nav flex-grow">
                                 <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/">{this.props.t('General:home')}</NavLink>
+                                    <NavLink tag={Link} className="text-dark" to="/">{t('General:home')}</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/user-profile">{this.props.t('General:userProfile')}</NavLink>
+                                    <NavLink tag={Link} className="text-dark" to="/user-profile">{t('General:userProfile')}</NavLink>
                                 </NavItem>
                                 <LanguageDropDown />
                             </ul>

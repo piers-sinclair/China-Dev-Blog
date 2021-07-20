@@ -4,11 +4,13 @@ import NavMenu from './NavMenu';
 
 export default class Layout extends React.PureComponent<{}, { children?: React.ReactNode }> {
     public render() {
+        const { children } = this.props;
+
         return (
             <React.Fragment>
                 <NavMenu />
                 <Container>
-                    {this.props.children}
+                    {children}
                 </Container>
             </React.Fragment>
         );

@@ -9,10 +9,11 @@ type HomeProps =
 class Home extends React.PureComponent<HomeProps> {
 
   public render() {
+    const { t } = this.props;
     return (
       <div>
-        <h1>{this.props.t('General:websiteTitle')}</h1>
-        <h2>{this.props.t('Home:body')}</h2>
+        <h1>{t('General:websiteTitle')}</h1>
+        <h2>{t('Home:body')}</h2>
       </div>
     );
   }

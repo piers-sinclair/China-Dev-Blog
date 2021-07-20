@@ -9,20 +9,24 @@ type LanguageDropDownProps =
 class LanguageDropDown extends React.PureComponent<LanguageDropDownProps> {
 
     public handleMenuClick(key: string) {
+        const { i18n } = this.props;
+
         switch (key) {
             case "1":
-                this.props.i18n.changeLanguage('en_us');
+                i18n.changeLanguage('en_us');
                 break;
             case "2":
-                this.props.i18n.changeLanguage('zh_cn');
+                i18n.changeLanguage('zh_cn');
                 break;
             default:
-                this.props.i18n.changeLanguage('en_us');
+                i18n.changeLanguage('en_us');
                 break;
         }
     }
 
     public render() {
+        const { t } = this.props;
+
         return (
             <Dropdown
                 overlay={
@@ -37,7 +41,7 @@ class LanguageDropDown extends React.PureComponent<LanguageDropDownProps> {
             }>
                 <Button>
                         <GlobalOutlined />
-                        {this.props.t('General:language')}
+                        {t('General:language')}
                         <DownOutlined />
                 </Button>
             </Dropdown>
